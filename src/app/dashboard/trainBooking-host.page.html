@@ -1,0 +1,14 @@
+<a mat-fab color="accent" class="mat-fab-bottom-right fixed z-3"   (click)="showAddDialog()">
+  <mat-icon>add</mat-icon>
+  <h3 mat-line>Category Information</h3>
+  <div layout="row" class="mat-padding" flex>
+    <div layout="column" flex="30">
+      <p class="tc-grey-500">Category:</p>
+      <p class="tc-grey-500">Description :</p>
+    </div>
+    <div layout="column" flex="70">
+      <p>{{(trainBooking$|async)?.category}}</p>
+      <p>{{(trainBooking$|async)?.registeredDate | date:'MM/dd/yy'}}</p>
+    </div>
+  </div>
+</a>

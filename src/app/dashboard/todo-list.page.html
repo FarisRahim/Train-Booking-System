@@ -15,52 +15,16 @@
     <div layout-gt-md="row">
       <div flex-gt-md="70">
         <mat-card>
-          <mat-tab-group>
-            <mat-tab label="First Time Booking">
-              <h1>Your First Booking</h1>
-              <p>Place Your Booking Here</p>
-              <form [formGroup]="editorForm">
-                <div layout="row" class="pad-bottom" flex>
-                  <mat-form-field flex>
-                    <input matInput
-                           placeholder="Name:"
-                           formControlName="name"
-                           type="text"
-                           flex/>
-                  </mat-form-field>
-                  <mat-form-field flex>
-                    <input matInput
-                           placeholder="IC No:"
-                           formControlName="icNo"
-                           type="text"
-                           flex/>
-                  </mat-form-field>
-                </div>
-              </form>
-              <button mat-raised-button color="accent" (click)="save(editorForm.value)" [disabled]="!editorForm.valid">
-              Submit
-            </button>
-            </mat-tab>
-            <mat-tab label="Previous Booking">
-              <h1>Your Previous Booking</h1>
-              <p>History</p>
-            </mat-tab>
-            <mat-tab label="Cancel/Refund Your Booking">
-              <h1>Your Cancel/Refund Booking</h1>
-              <p>Booking List</p>
-            </mat-tab>
-          </mat-tab-group>
           <mat-card-title>Booking Number</mat-card-title>
           <mat-card-subtitle>List of booking</mat-card-subtitle>
           <mat-divider></mat-divider>
           <mat-list>
-            <ng-template let-booking let-last="last" ngFor [ngForOf]="bookings$ | async">
+            <ng-template let-todo let-last="last" ngFor [ngForOf]="todo$ | async">
               <mat-list-item>
-                <h3 mat-line> {{booking.bookingNo}} </h3>
+                <h3 mat-line> {{todo.title}} </h3>
                 <span flex></span>
                 <span flex="80" layout-gt-xs="row">
-                  <div class="mat-caption tc-grey-700" flex-gt-xs="30"> {{ booking?.bookingNo }} </div>
-                  <div class="mat-caption tc-grey-700" flex-gt-xs="50"> {{ asset?.registeredDate | date:'shortDate' }} </div>
+                  <div class="mat-caption tc-grey-700" flex-gt-xs="30"> {{ todo?.completed }} </div>
                 </span>
                 <span>
                   <!--button-->
@@ -103,14 +67,13 @@
 
   <td-layout-footer>
     <div layout="row" layout-align="start center">
-      <span class="mat-caption">Copyright &copy; 2018 Albab Yang Punya. All rights reserved</span>
+      <span class="mat-caption">Copyright &copy; 2017 Terang LLP. All rights reserved</span>
       <span flex></span>
     </div>
   </td-layout-footer>
 </td-layout-nav>
 <a mat-fab color="accent" class="mat-fab-bottom-right fixed z-3" (click)="showAddDialog()">
   <mat-icon>add</mat-icon>
-
-
+</a>
 
 

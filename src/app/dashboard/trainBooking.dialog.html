@@ -1,0 +1,41 @@
+<h1 mat-dialog-title>Train Booking Interface</h1>
+<div mat-dialog-content>
+  <form [formGroup]="editorForm">
+    <div layout="row" class="pad-bottom" flex>
+      <mat-form-field flex>
+        <input matInput
+               placeholder="Booking No"
+               formControlName="bookingNo"
+               type="text"
+               flex/>
+      </mat-form-field>
+    </div>
+    <div layout="row" class="pad-bottom" flex>
+      <mat-form-field flex>
+        <input matInput
+               placeholder="Train No"
+               formControlName="trainNo"
+               type="text"
+               flex/>
+      </mat-form-field>
+    </div>
+    <div layout="row" class="pad-bottom" flex>
+      <mat-form-field flex>
+        <mat-select placeholder="Category" formControlName="category" flex>
+          <mat-option value="ADULT">ADULT</mat-option>
+          <mat-option value="CHILD">CHILD</mat-option>
+          <mat-option value="HANDICAP">HANDICAP</mat-option>
+          <mat-option value="ELDERLY">ELDERLY</mat-option>
+        </mat-select>
+
+      </mat-form-field>
+    </div>
+</form>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="accent" (click)="save(editorForm.value)" [disabled]="!editorForm.valid">
+    Enter
+  </button>
+</div>
+
+

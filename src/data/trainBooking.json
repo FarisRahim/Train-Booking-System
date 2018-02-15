@@ -1,0 +1,21 @@
+{
+  "price": "45.00",
+  "category": "ADULT",
+  "trainNo": "A1",
+  "bookingNo": "A10-1",
+  "quantity": "1",
+  "schedules": [
+    {
+      "date": "2/2/18",
+      "leaveTime": "09.00",
+      "arrivalTime": "18.00"
+    }
+  ],
+  "journey": {
+    "origin": "Gemas",
+    "journey": "Kuantan"
+  }
+
+}
+
+

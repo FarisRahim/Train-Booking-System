@@ -1,0 +1,35 @@
+[{
+  "Schedule": {
+    "date": "2/2/18",
+    "leaveTime": "09.00",
+    "arrivalTime": "18.00",
+    "Price": "45.00"
+  },
+  "Journey":{
+    "Origin":"Gemas",
+    "Journey":"Kuantan"
+  },
+  "Category":"ADULT",
+  "trainNo":"A1",
+  "bookingNo":"A10-1",
+  "quantity":"1"
+}
+,{
+  "Schedule": {
+    "date": "6/8/18",
+    "leaveTime": "12.00",
+    "arrivalTime": "13.45",
+    "Price": "3.00"
+  },
+  "Journey":{
+    "Origin":"Shah Alam",
+    "Journey":"Pudu"
+  },
+  "Category":"Child",
+  "trainNo":"B3",
+  "bookingNo":"B30-8",
+  "quantity":"1"
+}
+]
+
+
